@@ -24,7 +24,8 @@ def format_pos_info(aircraft_pos):
     -------
     position_formatted :
 
-    Examples:
+    Examples
+    --------
     >>> pydodo.request_position.format_pos_info()
     >>>
     """
@@ -52,7 +53,8 @@ def process_pos_response(response):
     -------
     pos_df : pandas.DataFrame
 
-    Examples:
+    Examples
+    --------
     >>> pydodo.request_position.process_pos_response()
     >>>
     """
@@ -82,7 +84,7 @@ def normalise_positions_units(df):
     pos_df : pandas.DataFrame
 
     Examples:
-    >>> pydodo.request_position.process_pos_response()
+    >>>
     >>>
     """
 
@@ -108,7 +110,8 @@ def null_pos_df(aircraft_id=None):
     -------
     pos_df : pandas.DataFrame
 
-    Examples:
+    Examples
+    --------
     >>> pydodo.request_position.process_pos_response()
     >>>
     """
@@ -159,8 +162,12 @@ def all_positions():
     If the response from Bluebird contains an error status code, an exception is
     thrown.
 
-    Examples:
-    >>> pydodo.request_position.process_pos_response()
+    Examples
+    --------
+    >>> pydodo.request_position.all_positions()
+         type  altitude  ground_speed  latitude  longitude  vertical_speed
+    BA1  A320     98.43            77  16.22379    8.74323               0
+    BA4  B787    196.85            77  19.62921   11.75863               0
     >>>
     """
 
@@ -206,8 +213,13 @@ def get_position(aircraft_id):
     If an invalid ID is given, or the call to Bluebird fails, an exception is
     thrown.
 
-    Examples:
-    >>> pydodo.request_position.process_pos_response()
+    Examples
+    --------
+    >>> pydodo.create_aircraft('BA4', 'B787', 10., 10., 10., 2000, 200)
+    True
+    >>> pydodo.request_position.get_position('BA4')
+         type  altitude  ground_speed  latitude  longitude  vertical_speed
+    BA4  B787        60          1025  10.07146    10.0128               0
     >>>
     """
 
@@ -235,8 +247,13 @@ def aircraft_position(aircraft_id):
     aircraft_pos : pandas.DataFrame
         Dataframe with position data, ``NaN`` if aircraft_id does not exist
 
-    Examples:
-    >>> pydodo.request_position.aircraft_position()
+    Examples
+    --------
+    >>> pydodo.create_aircraft('BA1', 'A320', 10., 10., 10., 2000, 200)
+    True
+    >>> pydodo.request_position.aircraft_position('BA1')
+         type  altitude  ground_speed  latitude  longitude  vertical_speed
+    BA1  A320     98.43            77  16.26207    8.81238               0
     >>>
     """
 

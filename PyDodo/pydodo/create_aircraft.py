@@ -57,9 +57,8 @@ def create_aircraft(
 
     Examples
     --------
-    >>> pydodo.create_aircraft.create_aircraft('BA1', ...)
-    >>>
-
+    >>> pydodo.create_aircraft('BA1', 'A320', 10., 10., 10., 2000, 200)
+    True
     """
 
     utils._validate_id(aircraft_id)
