@@ -21,7 +21,7 @@ pip install .
 2. From GitHub
 
 ```
-pip install git+https://github.com/alan-turing-institute/dodo.git@master#egg=pydodo\&subdirectory=PyDodo
+pip install git+https://github.com/alan-turing-institute/dodo.git@turing-away-day#egg=pydodo\&subdirectory=PyDodo
 ```
 
 ### Example usage
