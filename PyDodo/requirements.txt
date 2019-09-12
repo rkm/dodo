@@ -4,6 +4,7 @@ scipy
 pyproj
 aiohttp
 asyncio
+jupyter
 pytest==4.1.*
 pandas>=0.25.0
 requests>=2.22.0
