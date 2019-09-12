@@ -11,7 +11,7 @@ with open("requirements.txt", "r") as f:
 def get_config(dir=None):
     print("Getting the config file")
     config = (
-        "https://raw.githubusercontent.com/alan-turing-institute/dodo/master/config.yml"
+        "https://raw.githubusercontent.com/alan-turing-institute/dodo/turing-away-day/config.yml"
     )
     if dir == None:
         call(["wget", config])
