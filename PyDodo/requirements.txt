@@ -4,7 +4,7 @@ scipy
 pyproj
 aiohttp
 asyncio
-pytest==5.2.0
+pytest==9.0.3
 pandas>=0.25.0
 requests>=2.22.0
 pyyaml
